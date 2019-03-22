@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import BasicComponent from './BasicComponent.vue';
 
-// Man kan registrere lokalt til komponenter:
+// We can register components locally:
 export default {
   components: {
     BasicComponent,
   },
 };
 
-// Eller globalt for alle til å bruke:
+// Or globally for everyone to use:
 Vue.component('basic-component', BasicComponent);

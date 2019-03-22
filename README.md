@@ -1,4 +1,4 @@
-# vue_kurs
+# vue_course
 
 ## Project setup
 ```

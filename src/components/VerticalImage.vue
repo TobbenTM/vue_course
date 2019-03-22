@@ -58,3 +58,9 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+img {
+  /* We would like to be able to "scroll" down a image */
+  transition: top .5s ease-in-out;
+}
+</style>

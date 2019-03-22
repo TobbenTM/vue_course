@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <!-- Vi kan iterere over lister -->
+    <!-- We can iterate over lists -->
     <ul>
       <li
         v-for="user in users"

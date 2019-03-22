@@ -1,9 +1,9 @@
 <template>
   <div class="component">
     <h1>Jernbanetorget T</h1>
-    <p v-if="loading">Laster data...</p>
+    <p v-if="loading">Loading data...</p>
     <p v-else-if="error">{{ error }}</p>
-    <p v-else-if="!data">Ingen data å vise!</p>
+    <p v-else-if="!data">No data to show!</p>
     <p v-else>{{ data[0] | formatDeparture }}</p>
   </div>
 </template>
@@ -55,11 +55,11 @@ export default {
       const delta = ((now - expectedDepartureTime) / 1000) + 60;
       let humanizedDepartureTime = '';
       if (delta < 60) {
-        humanizedDepartureTime = `${Math.floor(delta)} sekunder`;
+        humanizedDepartureTime = `${Math.floor(delta)} seconds`;
       } else {
-        humanizedDepartureTime = `${Math.floor(delta/60)} minutter`;
+        humanizedDepartureTime = `${Math.floor(delta/60)} minutes`;
       }
-      return `Neste avgang: ${display.DestinationDisplay} om ${humanizedDepartureTime}`;
+      return `Next departure: ${display.DestinationDisplay} in ${humanizedDepartureTime}`;
     },
   },
 };

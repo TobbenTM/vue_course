@@ -1,6 +1,7 @@
 <template>
   <div class="component">
-    <!-- Alt innenfor krøllparantesen blir evaluert -->
+    <!-- Everything inside the mustaches
+         get evaluated when shown -->
     {{ userMessage }}
   </div>
 </template>

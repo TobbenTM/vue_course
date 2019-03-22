@@ -2,7 +2,7 @@
   <div class="component">
     <button v-loading="savingChanges"
             v-on:click="savingChanges = true">
-      Lagre
+      Save
     </button>
   </div>
 </template>

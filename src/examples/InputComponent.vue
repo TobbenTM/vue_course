@@ -2,11 +2,11 @@
   <div class="component">
     <input
       v-model="userMessage"
-      placeholder="Legg igjen en melding.."
+      placeholder="Leave a message.."
     />
-    <p>Meldingen er: "{{ userMessage }}"</p>
-    <p>Eller "{{ userMessage.replace('react', 'vue') }}" uten teite rammeverk!</p>
-    <!-- (Dette burde gjøres med computed properties, mer om det snart!) -->
+    <p>The message is: "{{ userMessage }}"</p>
+    <p>Or "{{ userMessage.replace('react', 'vue') }}" without silly frameworks!</p>
+    <!-- (This should be done with computed properties, more about that soon!) -->
   </div>
 </template>
 

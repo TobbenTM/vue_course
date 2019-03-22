@@ -1,15 +1,15 @@
 <template>
   <div class="component">
-    <!-- Vi kan vise elementer basert på data -->
-    <p v-if="showMessage">Vue er så kult!</p>
-    <p v-else-if="showError">Oida, noe gikk galt!</p>
-    <p v-else>Hva er det som skjedde?</p>
+    <!-- We can show/hide elements based on data -->
+    <p v-if="showMessage">Vue is so cool!</p>
+    <p v-else-if="showError">Oops, something went wrong!</p>
+    <p v-else>What the heck happened!?</p>
 
     <!-- Et alternativ til v-if er v-show -->
-    <p v-show="false">Denne eksisterer, men er skjult</p>
+    <p v-show="false">This exists, but is hidden</p>
 
-    <button v-on:click="showMessage = false">Fjern melding</button> | 
-    <button v-on:click="showError = false">Fjern feil</button>
+    <button v-on:click="showMessage = false">Remove message</button> | 
+    <button v-on:click="showError = false">Remove error</button>
   </div>
 </template>
 

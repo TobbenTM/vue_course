@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <!-- Man kan kjøre data igjennom filtre -->
+    <!-- We can run data through filters -->
     {{ currentDate | formatDate }} <br/>
     {{ currentDate | formatDate | capitalize }}
   </div>

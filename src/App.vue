@@ -5,59 +5,59 @@
       <app-slide>
         <img src="./assets/logo.png"/>
         <h1>Vue.js</h1>
-        <h4>Introduksjonskurs</h4>
-        <a href="http://nærd.no/vue" style="width: 100%;">nærd.no/vue</a>
-        <a href="https://github.com/tobbentm/vue_kurs">github.com/tobbentm/vue_kurs</a>
+        <h4>Introductionary course</h4>
+        <a href="http://tobbentm.com/vue/en" style="width: 100%;">tobbentm.com/vue/en</a>
+        <a href="https://github.com/tobbentm/vue_course">github.com/tobbentm/vue_course</a>
       </app-slide>
 
       <app-slide>
         <h1>Agenda:</h1>
         <ul>
-          <li>Hva er Vue.js?</li>
+          <li>What's Vue.js?</li>
           <li>Devtools</li>
-          <li>Komponenter</li>
+          <li>Components</li>
           <li>Databinding</li>
           <li>Event handling</li>
-          <li>Kode-pause! ❤</li>
+          <li>Code-break! ❤</li>
           <li>Computed properties</li>
           <li>Watchers</li>
           <li>Custom inputs</li>
-          <li>Filtre</li>
+          <li>Filters</li>
           <li>Directives</li>
           <li>Lifecycle</li>
           <li>Gotchas &amp; pitfalls</li>
-          <li>Routing og state</li>
+          <li>Routing &amp; state</li>
         </ul>
       </app-slide>
 
       <app-slide>
-        <h1>Hvem er jeg?</h1>
+        <h1>Who am I?</h1>
         <img src="http://tobbentm.com/ul/pl05.jpg" style="border-radius: 50%; overflow: hidden; max-width: 256px;" />
         <h4>Tobias Lønnerød Madsen</h4>
-        <p>Fullstack utvikler .Net</p><br/>
+        <p>Fullstack developer .Net</p><br/>
         <a href="https://github.com/TobbenTM">github.com/TobbenTM</a>
       </app-slide>
 
       <app-slide>
-        <h1>Hva er Vue.js?</h1>
+        <h1>What's Vue.js?</h1>
         <div class="half">
           <ul>
-            <li>Lettlært
-              <ul><li>Bruker bare html/css/js</li></ul>
+            <li>Easy to learn
+              <ul><li>Only using html/css/js</li></ul>
             </li>
-            <li>Fleksibelt
+            <li>Flexible
               <ul>
-                <li>Kan brukes i små apps for å erstatte jQuery</li>
-                <li>Eller i større Single Page Applications</li>
+                <li>Can be use in small apps to replace jQuery</li>
+                <li>Or in big Single Page Applications!</li>
               </ul>
             </li>
-            <li>Raskt
+            <li>Fast
               <ul>
-                <li>20 KB .js pakke</li>
-                <li>Konsistent like rask eller raskere enn React og Angular i benchmarks</li>
+                <li>20 KB .js bundle</li>
+                <li>Consistently as fast or faster than React &amp; Angular in benchmarks</li>
               </ul>
             </li>
-            <li>Enkel dokumentasjon</li>
+            <li>Straight forward documentation</li>
             <li>Opinionated</li>
           </ul>
         </div>
@@ -67,19 +67,19 @@
       <app-slide>
         <h1>Devtools</h1>
         <ul>
-          <li>Finnes kjempebra extensions til <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">Chrome</a> og <a href="https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/">Firefox</a></li>
-          <li>Rask prototyping og skaffolding med @vue/cli</li>
+          <li>Great extensions made for <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd">Chrome</a> and <a href="https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/">Firefox</a></li>
+          <li>Fast prototyping with @vue/cli</li>
         </ul>
         <code-block
           :code="
 `npm install -g @vue/cli
-vue create vue-prosjekt`"
+vue create vue-project`"
           lang="text/x-sh"
         />
       </app-slide>
 
       <app-slide>
-        <h1>Komponenter</h1>
+        <h1>Components</h1>
         <code-block
           :code="examples.BasicComponentExample"
           lang="text/x-vue"
@@ -88,18 +88,18 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Komponenter</h1>
-        <h2 class="subtitle">Hvordan registrere for bruk?</h2>
+        <h1>Components</h1>
+        <h2 class="subtitle">How to register for usage?</h2>
         <code-block
           :code="examples.RegistrationExample"
           lang="text/javascript"
           class="half"
         />
         <div class="half">
-          <h4>Fungerer for:</h4>
+          <h4>Works for:</h4>
           <ul>
-            <li>Komponenter</li>
-            <li>Filtre</li>
+            <li>Components</li>
+            <li>Filters</li>
             <li>Plugins</li>
             <li>Direktiver</li>
           </ul>
@@ -119,7 +119,7 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Databinding for attributter</h1>
+        <h1>Databinding for attributtes</h1>
         <div class="half">
           <code-block
             :code="examples.AttrBindingComponentExample"
@@ -131,7 +131,7 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Databinding med evaluering</h1>
+        <h1>Databinding with evaluation</h1>
         <div class="half">
           <code-block
             :code="examples.InputComponentExample"
@@ -155,7 +155,7 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Vue objektet</h1>
+        <h1>The Vue object</h1>
         <code-block
           :code="
 `export default {
@@ -185,18 +185,24 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>La oss kode!</h1>
-        <h2 class="subtitle">Dette bør vi få til:</h2>
+        <h1>Let's code!</h1>
+        <h2 class="subtitle">This are our goals:</h2>
         <ul>
-          <li>Få kjørt Vue CLI prosjektet (npm run serve)</li>
-          <li>Lag din egen komponent!
+          <li>Run our own Vue CLI project (npm run serve)</li>
+          <li>Create our own component!
             <ul>
-              <li>Bør ha et input felt</li>
-              <li>Og noe for å vise verdien fra feltet</li>
+              <li>With a input field</li>
+              <li>And something to show the users input</li>
             </ul>
           </li>
-          <li>Legg til komponenten i App.vue</li>
+          <li>Add the component to App.vue</li>
         </ul>
+        <code-block
+          :code="
+`npm install -g @vue/cli
+vue create vue-project`"
+          lang="text/x-sh"
+        />
       </app-slide>
 
       <app-slide>
@@ -228,10 +234,10 @@ vue create vue-prosjekt`"
         <h1>Computed properties</h1>
         <div class="half">
           <ul>
-            <li>Vil oppdateres om kilder oppdateres</li>
-            <li>Cachet basert på dependencies</li>
-            <li>Fine til å koble opp mot state</li>
-            <li>Fungerer som vanlige properties</li>
+            <li>Will be updated if any source is updated</li>
+            <li>Cached based on dependencies</li>
+            <li>Great for hooking up to a global state</li>
+            <li>Works as normal properties in the component</li>
           </ul>
           <computed-component/>
         </div>
@@ -254,8 +260,8 @@ vue create vue-prosjekt`"
         </div>
         <div class="half">
           <ul>
-            <li>For å reagere på endringer</li>
-            <li>Som regel bedre å bruke computed</li>
+            <li>Used for reacting to changes on properties</li>
+            <li>(Usually better to use computed properties)</li>
           </ul>
           <watcher-component/>
         </div>
@@ -265,9 +271,9 @@ vue create vue-prosjekt`"
         <h1>Custom inputs</h1>
         <div class="half">
           <ul>
-            <li>Noen ganger trenger vi custom inputs</li>
-            <li>Vi kan utnytte 2-veis databinding med v-model</li>
-            <li>(bør ikke overbrukes)</li>
+            <li>Some times we want custom inputs</li>
+            <li>We can exploit two-way binding with v-model</li>
+            <li>(should not be overdone)</li>
           </ul>
           <v-model-usage-component/>
           <code-block
@@ -297,8 +303,8 @@ vue create vue-prosjekt`"
         </div>
         <div class="half">
           <ul>
-            <li>For å enkelt transformere tekst</li>
-            <li>På en gjenbrukbar måte</li>
+            <li>Use for easily transforming text</li>
+            <li>In a reusable way</li>
           </ul>
           <filter-component/>
         </div>
@@ -308,9 +314,9 @@ vue create vue-prosjekt`"
         <h1>Directives</h1>
         <div class="half">
           <ul>
-            <li>For å gjøre endringer på elementer enkelt</li>
-            <li>På en gjenbrukbar måte</li>
-            <li>Kan registrere hooks for:
+            <li>To make element-level changes easy</li>
+            <li>In a reusable way</li>
+            <li>Can register hooks for:
               <ul>
                 <li>bind</li>
                 <li>inserted</li>
@@ -332,7 +338,7 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Vue objektet</h1>
+        <h1>The Vue object</h1>
         <code-block
           :code="
 `export default {
@@ -363,7 +369,7 @@ vue create vue-prosjekt`"
 
       <app-slide>
         <h1>Lifecycle</h1>
-        <h2 class="subtitle">Hvordan reagere på komponenters tilstand?</h2>
+        <h2 class="subtitle">How do we react to component state?</h2>
       </app-slide>
 
       <app-slide>
@@ -375,10 +381,10 @@ vue create vue-prosjekt`"
 
       <app-slide>
         <h1>Lifecycle</h1>
-        <h2 class="subtitle">Praktisk eksempel</h2>
+        <h2 class="subtitle">Practical example</h2>
         <ul class="half">
-          <li>Kan brukes for å begynne lasting når komponent blir vist</li>
-          <li>Kan brukes for å rydde opp i ubrukte ressurser</li>
+          <li>Can be used for loading data whenever shown</li>
+          <li>Can be used for cleaning up resources when no longer needed</li>
         </ul>
         <lifecycle-component/>
       </app-slide>
@@ -398,8 +404,8 @@ vue create vue-prosjekt`"
       </app-slide>
 
       <app-slide>
-        <h1>Routing og state</h1>
-        <h2 class="subtitle">For større applikasjoner</h2>
+        <h1>Routing &amp; state</h1>
+        <h2 class="subtitle">For bigger applikations</h2>
         <code-block
           :code="
 `vue add router
@@ -409,17 +415,17 @@ vue add vuex`"
       </app-slide>
 
       <app-slide>
-        <h1>State med Vuex</h1>
+        <h1>State with Vuex</h1>
         <a href="https://vuex.vuejs.org/" target="_blank"><img src="./assets/vuex_flow.png" /></a>
       </app-slide>
 
       <app-slide>
-        <h1>State med Vuex</h1>
+        <h1>State with Vuex</h1>
         <a href="https://vuex.vuejs.org/" target="_blank"><img src="./assets/vuex.png" /></a>
       </app-slide>
 
       <app-slide>
-        <h1>State med Vuex</h1>
+        <h1>State with Vuex</h1>
         <code-block
           :code="examples.StoreExample"
           lang="text/javascript"
@@ -428,7 +434,7 @@ vue add vuex`"
       </app-slide>
 
       <app-slide>
-        <h1>State med Vuex</h1>
+        <h1>State with Vuex</h1>
         <div class="half">
           <code-block
             :code="examples.StoreExample"

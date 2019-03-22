@@ -1,11 +1,11 @@
 <template>
   <div class="component">
-    <!-- Vi kan binde event-handlere -->
-    <button v-on:click="onButtonClicked">Jeg kan trykkes!</button><br/>
-    <button @click="onButtonClicked">Jeg kan trykkes!</button><br/>
+    <!-- We can easily bind event handlers -->
+    <button v-on:click="onButtonClicked">Push me!</button><br/>
+    <button @click="onButtonClicked">Push me!</button><br/>
 
     <!-- Og også med modifiers! -->
-    <button v-on:click.prevent="onButtonClicked">Jeg kan trykkes!</button>
+    <button v-on:click.prevent="onButtonClicked">Push me!</button>
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 export default {
   methods: {
     onButtonClicked(e) {
-      alert(`Du trykte på knappen! defaultPrevented: ${e.defaultPrevented ? 'true' : 'false'}`);
+      alert(`You pushed the button! defaultPrevented: ${e.defaultPrevented ? 'true' : 'false'}`);
     },
   },
 };

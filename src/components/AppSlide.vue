@@ -79,10 +79,6 @@ export default {
       max-width: 80%;
       max-height: 90%;
       padding: 2em;
-      
-      /* We would like to be able to "scroll" down a image */
-      transition: top .5s ease-in-out;
-      top: 0;
     }
     
     ul {

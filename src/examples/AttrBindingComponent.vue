@@ -1,8 +1,8 @@
 <template>
   <div class="component">
-    <!-- Vi kan også binde mot attributter -->
-    <a v-bind:href="url">Link til {{ url }}</a><br/>
-    <a :href="url">Link til {{ url }}</a>
+    <!-- We can also bind attributes -->
+    <a v-bind:href="url">Link to {{ url }}</a><br/>
+    <a :href="url">Link to {{ url }}</a>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      url: 'http://nærd.no',
+      url: 'http://tobbentm.com',
     };
   },
 };

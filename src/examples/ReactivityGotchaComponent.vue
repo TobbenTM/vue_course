@@ -6,10 +6,10 @@
       </li>
     </ul>
     <button v-on:click="addProperty(false)">
-      Legg til property
+      Add property
     </button>
     <button v-on:click="addProperty(true)">
-      Legg til property med Vue.set
+      Add property with Vue.set
     </button>
   </div>
 </template>

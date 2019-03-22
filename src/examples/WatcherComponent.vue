@@ -2,11 +2,11 @@
   <div class="component">
     <input
       v-model="searchQuery"
-      placeholder="Hva vil du finne?"
+      placeholder="What would you like to find?"
     /><br/>
-    <p v-if="searching">Søker...</p>
-    <p v-else-if="result">Fant {{ result }} resultater!</p>
-    <p v-else>Fant ingen ting!</p>
+    <p v-if="searching">Searching...</p>
+    <p v-else-if="result">Fount {{ result }} results!</p>
+    <p v-else>Didn't find anything!</p>
   </div>
 </template>
 

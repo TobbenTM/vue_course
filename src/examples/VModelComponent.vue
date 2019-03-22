@@ -1,12 +1,12 @@
 <template>
   <div class="component">
     <!--
-      På denne komponenten kan man bruke v-model
-            for to-veis kommunikasjon!
+      On this component you can utilize v-model
+            for two-way communication!
     -->
-    <input type="text" placeholder="Gateadresse" v-model="localState.street"/>
-    <input type="text" placeholder="Postnummer" v-model="localState.zip"/>
-    <input type="text" placeholder="Poststed" v-model="localState.city"/>
+    <input type="text" placeholder="Street address" v-model="localState.street"/>
+    <input type="text" placeholder="Zip" v-model="localState.zip"/>
+    <input type="text" placeholder="City" v-model="localState.city"/>
   </div>
 </template>
 
@@ -51,13 +51,13 @@ export default {
   grid-template-columns: 2fr 3fr;
   grid-gap: .2em;
 
-  input[placeholder="Gateadresse"] {
+  input[placeholder="Street address"] {
     grid-area: street;
   }
-  input[placeholder="Postnummer"] {
+  input[placeholder="Zip"] {
     grid-area: zip;
   }
-  input[placeholder="Poststed"] {
+  input[placeholder="City"] {
     grid-area: city;
   }
 }
