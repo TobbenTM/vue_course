@@ -1,10 +1,10 @@
 <template>
   <div class="component">
-    <h1>Jernbanetorget T</h1>
+    <h1>Chuck Norris <strong>facts</strong></h1>
     <p v-if="loading">Loading data...</p>
     <p v-else-if="error">{{ error }}</p>
     <p v-else-if="!data">No data to show!</p>
-    <p v-else>{{ data[0] | formatDeparture }}</p>
+    <p v-else>{{ data | formatFact }}</p>
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
       this.error = null;
 
       try {
-        var result = await axios.get('http://reisapi.ruter.no/StopVisit/GetDepartures/3010011');
+        var result = await axios.get('https://api.chucknorris.io/jokes/random');
         this.data = result.data;
         await sleep(5000);
         this.loading = false;
@@ -48,18 +48,9 @@ export default {
     },
   },
   filters: {
-    formatDeparture(departure) {
-      const display = departure.MonitoredVehicleJourney.MonitoredCall;
-      const expectedDepartureTime = new Date(display.ExpectedDepartureTime);
-      const now = new Date();
-      const delta = ((now - expectedDepartureTime) / 1000) + 60;
-      let humanizedDepartureTime = '';
-      if (delta < 60) {
-        humanizedDepartureTime = `${Math.floor(delta)} seconds`;
-      } else {
-        humanizedDepartureTime = `${Math.floor(delta/60)} minutes`;
-      }
-      return `Next departure: ${display.DestinationDisplay} in ${humanizedDepartureTime}`;
+    formatFact(fact) {
+      if (!fact) return 'No facts are needed about Chuck';
+      return fact.value;
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="slide">
-    <img src="../assets/2s_stamp.png" class="slide__stamp">
+    <img src="../assets/fnl.png" class="slide__stamp">
 
     <div class="slide__content">
       <slot></slot>
